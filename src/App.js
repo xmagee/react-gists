@@ -1,4 +1,6 @@
-import ReactGist from './ReactGist'  //DiGithub
+import ReactGist from './ReactGist'
+import { DiGithub } from 'react-icons/di'
+import { CgSmileMouthOpen } from 'react-icons/cg'
 
 export default function App() {
 	const gists = require('./gists.json')
@@ -9,6 +11,14 @@ export default function App() {
 				<section className='container'>
 					<span className='navigation-title'>
 						<h1 className='title'>React Gists</h1>
+						<a href='https://github.com/xmagee/react-gists' 
+							target='_blank' className='float-right github-link'>
+							<DiGithub size={50} />
+						</a>
+						<a href='https://alexmagee.com'
+							target='_blank' className='float-right my-link'>
+							<CgSmileMouthOpen size={43} />
+						</a>
 					</span>
 				</section>
 			</nav>

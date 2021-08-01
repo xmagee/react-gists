@@ -8,6 +8,15 @@
 
 a {
 	color: #61dbfb !important;
+	cursor: pointer;
+}
+
+.github-link {
+	margin-top: 5px;
+}
+
+.my-link {
+	margin-top: 8px;
 }
 
 .hr-custom {
