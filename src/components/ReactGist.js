@@ -9,7 +9,7 @@ export default function ReactGist(props) {
 
 	return (
 		<>
-			<h4 id={`#${ gist.title.toLowerCase().split(' ').join('-') }`}>
+			<h4 id={`${ gist.title.toLowerCase().split(' ').join('-') }`}>
 				<a href={`#${ gist.title.toLowerCase().split(' ').join('-') }`}>
 					{`${gist.title} `}#
 				</a>
@@ -18,12 +18,13 @@ export default function ReactGist(props) {
 			<GoClippy
 				size={45}
 				className='copy-clipboard-button float-right clipboard-btn'
-				data-clipboard-target={`#gist_content_${index}`}
+				data-clipboard-target={`gist_content_${index}`}
 				onClick={() => { 
 					setCopiedMessage(true)
 					setTimeout(() => {
 						setCopiedMessage(false)
-					}, 1000) 
+						document.getElementById(`gist_content_${index}`).blur()
+					}, 600) 
 				}} />
 
 			<SyntaxHighlighter language='javascript' style={solarizedDark}
