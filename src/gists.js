@@ -66,7 +66,67 @@ function GenericTable(props) {
 		</table>
 	)
 }`
-    }
+    }, 
+	{
+		title: 'Theme Switcher / Component Themes',
+        author: 'xmagee',
+        profile: 'https://github.com/xmagee',
+        content: 
+`import { useState } from 'react'
+import { MdBrightness3, MdBrightness7 } from 'react-icons/md'
+
+function MyApp() {
+    const [ darkMode, toggleDarkMode ] = useState(true)
+
+    return (
+        <>
+            <button className={\`btn \${darkMode ? 'btn_dark' : 'btn_light'}\`}
+                onClick={() => { toggleDarkMode(!darkMode) }}>
+                {darkMode ?
+                    (<MdBrightness7 size={25} color='white' />)
+                    :
+                    (<MdBrightness3 size={25} color='black' />)
+                }
+            </button>
+        </>
+    )
+}`
+	}, 
+	{
+		title: 'Make Custom Element as Component',
+        author: 'xmagee',
+        profile: 'https://github.com/xmagee',
+        content: 
+`function MyButton(props) {
+    return (
+        <button {...props}>
+            {props.title}
+        </button>
+    )
+}
+
+//use it in an app/another component:
+function UseMyButton() {
+    return (
+        <>
+            <MyButton title='click me!' />
+        </>
+    )
+}`
+	}, 
+	{
+		title: ' Loop Render Elements From Array',
+        author: 'xmagee',
+        profile: 'https://github.com/xmagee',
+        content: 
+`<ul>
+{[1,2,3].map((i, index) => {
+	<li key={index}>
+		{i}
+	</li>
+})}
+</ul>`
+	}
 ]
 
 export default gists
