@@ -11,12 +11,13 @@ a {
 	cursor: pointer;
 }
 
-.github-link {
-	margin-top: 5px;
-}
-
-.my-link {
-	margin-top: 8px;
+.topnav-links {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	float: right;
+	margin-top: 8;
 }
 
 .hr-custom {
